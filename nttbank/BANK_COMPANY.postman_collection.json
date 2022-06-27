@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "4fb05369-6520-4aef-89ce-4e23c8ef04b3",
+		"name": "BANK_COMPANY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar empresas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar empresa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"BBVA\",\r\n        \"rubro\": \"banco\",\r\n        \"telefono\": 4336767,\r\n        \"direccion\": \"Av Arequipa 6789\",\r\n        \"ruc\": \"13407834594\",\r\n        \"correo\": \"servicios123@bbva.com.pe\",\r\n        \"representante\": \"Carlos Vargas\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar empresa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"id\": \"629fb979fce98695f2dd423f\",\r\n        \"nombre\": \"Telefonica\",\r\n        \"rubro\": \"Telecomunicaciones\",\r\n        \"telefono\": 4673455,\r\n        \"direccion\": \"Av Javier Prado 1187\",\r\n        \"ruc\": \"11340289559\",\r\n        \"correo\": \"comercial@telefonica.com.pe\",\r\n        \"representante\": \"Javier Prado\"\r\n    }\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar empresa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/companies/62a02ef08eca9f3467522edc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companies",
+						"62a02ef08eca9f3467522edc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar empresa por ruc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "10560899851"
+				},
+				"url": {
+					"raw": "http://localhost:8080/companies/ruc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companies",
+						"ruc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

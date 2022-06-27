@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "86a8b174-c114-485d-bb43-f7686e09315a",
+		"name": "BootCoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AccountCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doc\":\"19406574\",\r\n    \"tipoDoc\":\"dni\",\r\n    \"celular\":\"999456654\",\r\n    \"correo\":\"admin@correo.com\",\r\n    \"fondos\":1200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipoDoc\":\"dni\",\r\n    \"celular\":\"999456654\",\r\n    \"correo\":\"admin2@correo.com\",\r\n    \"fondos\":1500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountFindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/account/19406574",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"account",
+						"19406574"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountFindByDoc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/account/19406574",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"account",
+						"19406574"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RateCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"compra\":3.5,\r\n    \"venta\": 3.8,\r\n    \"fecha\":\"2022-06-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RateUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"compra\":3.6,\r\n    \"venta\": 3.9,\r\n    \"fecha\":\"2022-06-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RateFindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RateDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/rate/507f1f77bcf86cd799439011",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"rate",
+						"507f1f77bcf86cd799439011"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransactionCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comprador\":\"19406574\",\r\n    \"vendedor\":\"19452321\",\r\n    \"monto\":50.0,\r\n    \"modoPago\":\"corriente\",\r\n    \"rate\":\"507f1f77bcf86cd799439011\",\r\n    \"fecha\":\"2022-06-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransactionUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comprador\":\"19406574\",\r\n    \"vendedor\":\"19452321\",\r\n    \"monto\":50.0,\r\n    \"modoPago\":\"corriente\",\r\n    \"rate\":\"507f1f77bcf86cd799439011\",\r\n    \"fecha\":\"2022-06-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransactionFindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransactionDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/transaction/510f1f76af96ed79923245",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"transaction",
+						"510f1f76af96ed79923245"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransactionConfirmar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/transaction/confirm/510f1f76af96ed79923245",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"transaction",
+						"confirm",
+						"510f1f76af96ed79923245"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransactionFindById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/transaction/510f1f76af96ed79923245",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"transaction",
+						"510f1f76af96ed79923245"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

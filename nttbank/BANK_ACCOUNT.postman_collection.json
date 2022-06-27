@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "8b0674e0-b93e-4b6c-85e4-9623ac78be95",
+		"name": "BANK_ACCOUNT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar cuentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"deposito\": 43450.0,\r\n        \"retiro\": 2560.0,\r\n        \"nroCuenta\": \"1238746980\",\r\n        \"tipo\": \"Ahorros\",\r\n        \"apertura\": \"2022-06-07\",\r\n        \"cliente\": \"griseld valdivia\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar cuenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": \"62a0369d88a1986d30240950\",\r\n        \"deposito\": 89450.0,\r\n        \"retiro\": 2560.0,\r\n        \"nroCuenta\": \"1238746980\",\r\n        \"tipo\": \"Ahorros\",\r\n        \"apertura\": \"2022-06-08\",\r\n        \"cliente\": \"romulo valdivia\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar cuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/accounts/62a0369d88a1986d30240950",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"62a0369d88a1986d30240950"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

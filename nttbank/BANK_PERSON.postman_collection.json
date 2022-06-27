@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "748d7662-9284-4aee-8efa-67924d8e21dc",
+		"name": "BANK_PERSON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Guardar persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"dni\": \"99127833\",\r\n        \"nombres\": \"roberto\",\r\n        \"apellidos\": \"valdivia aguilar\",\r\n        \"email\": \"rvaldivia501@gmail.com\",\r\n        \"telefono\": 979198166,\r\n        \"direccion\": \"av colonial 1234\",\r\n        \"salario\": 13189.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar persona",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62a023c9b6853602ecedf6f9\",\r\n    \"dni\": \"99127833\",\r\n    \"nombres\": \"roberto\",\r\n    \"apellidos\": \"valdivia aguilar\",\r\n    \"email\": \"rvaldivia501@gmail.com\",\r\n    \"telefono\": 979198166,\r\n    \"direccion\": \"av la marina 1234\",\r\n    \"salario\": 53189.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar persona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persons/62a023c9b6853602ecedf6f9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"62a023c9b6853602ecedf6f9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar persona por dni",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "77451234"
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons/dni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"dni"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
