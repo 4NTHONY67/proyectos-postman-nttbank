@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "479ee0c5-e211-43c1-92c4-e0459cc68534",
+		"name": "Monedero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CrearPago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoDocumento\":\"DNI\",\r\n  \"nroDocumento\":\"46753456\",\r\n  \"celular\":999123455,\r\n  \"imei\":\"1234AQ\",\r\n  \"correo\":\"antonioev@gmail.com\",\r\n  \"pago\":200.0,\r\n  \"fechaPago\":\"2022-06-01\",\r\n  \"tipoPago\":\"deposito\",\r\n  \"numCuenta\":\"100023455\",\r\n  \"numTarjeta\":\"12345556\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/monederos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"monederos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Pago",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoDocumento\":\"DNI\",\r\n  \"nroDocumento\":\"46753456\",\r\n  \"celular\":999123455,\r\n  \"imei\":\"1234AQ\",\r\n  \"correo\":\"antonioev@gmail.com\",\r\n  \"pago\":200.0,\r\n  \"fechaPago\":\"2022-06-01\",\r\n  \"tipoPago\":\"deposito\",\r\n  \"numCuenta\":\"100023455\",\r\n  \"numTarjeta\":\"12345556\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/monederos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"monederos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pago",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/monederos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"monederos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar pago",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/monederos/62bbb8f79ebcb04d119c376e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"monederos",
+						"62bbb8f79ebcb04d119c376e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Encontrar por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/monederos/62bbb8f79ebcb04d119c376e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"monederos",
+						"62bbb8f79ebcb04d119c376e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
